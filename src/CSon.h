@@ -12,8 +12,21 @@
 class Cson
 {
 public:
-    /// @brief constructeur 
-    Cson();
+    /// @brief constructeur paramètre
+    /// @param niveauSonoreMoyen 
+    /// @param niveauSonoreCrete 
+    /// @param vReal 
+    /// @param vImag 
+    /// @param bytesRead 
+    /// @param i2sData 
+    Cson(
+        float niveauSonoreMoyen,
+    float niveauSonoreCrete,
+    float *vReal,
+    float *vImag,
+     size_t bytesRead,
+    int32_t *i2sData
+    );
     
     float niveauSonoreMoyen;
     float niveauSonoreCrete;
@@ -30,3 +43,5 @@ private:
     size_t bytesRead;
     int32_t *i2sData;
 };
+
+ 
